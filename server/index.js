@@ -19,6 +19,8 @@ app.get('/', (req, res) => {
     })
 })
 
+app.use('*', (req, res) => res.status(404).json({msg: 'Page not found'}))
+
 app.use(error)
 
 
